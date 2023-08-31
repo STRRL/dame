@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "dame",
+    "description": "Time based behavior alignment and focusing.",
+    "version": "0.1.0",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icons/dame.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "icons/dame.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ],
+            "use_dynamic_url": true
+        }
+    ],
+    "icons": {
+        "128": "icons/dame.png"
+    },
+    "author": "dame@strrl.dev"
+}
